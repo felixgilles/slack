@@ -1,0 +1,4 @@
+CL\Slack\Payload\UsersInfoPayloadResponse:
+    properties:
+        team:
+            type: CL\Slack\Model\Team
