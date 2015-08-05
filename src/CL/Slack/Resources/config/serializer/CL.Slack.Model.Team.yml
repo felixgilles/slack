@@ -6,7 +6,7 @@ CL\Slack\Model\Team:
             type: string
         domain:
             type: string
-        email_domain:
+        emailDomain:
             type: string
         icon:
             type: CL\Slack\Model\TeamIcon

@@ -22,7 +22,7 @@ class Team extends AbstractModel
     /**
      * @var string|null
      */
-    private $email_domain;
+    private $emailDomain;
 
     /**
      * @var TeamIcon|null
@@ -58,7 +58,7 @@ class Team extends AbstractModel
      */
     public function getEmailDomain()
     {
-        return $this->email_domain;
+        return $this->emailDomain;
     }
 
     /**

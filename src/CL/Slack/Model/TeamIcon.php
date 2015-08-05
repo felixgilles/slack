@@ -7,44 +7,44 @@ class TeamIcon extends AbstractModel
     /**
      * @var string|null
      */
-    private $image_34;
+    private $image34;
 
     /**
      * @var string|null
      */
-    private $image_44;
+    private $image44;
 
     /**
      * @var string|null
      */
-    private $image_68;
+    private $image68;
 
     /**
      * @var string|null
      */
-    private $image_88;
+    private $image88;
 
     /**
      * @var string|null
      */
-    private $image_102;
+    private $image102;
 
     /**
      * @var string|null
      */
-    private $image_132;
+    private $image132;
 
     /**
      * @var string
      */
-    private $image_original;
+    private $imageOriginal;
 
     /**
      * @return string|null
      */
     public function getImage132()
     {
-        return $this->image_132;
+        return $this->image132;
     }
 
     /**
@@ -52,7 +52,7 @@ class TeamIcon extends AbstractModel
      */
     public function getImage102()
     {
-        return $this->image_102;
+        return $this->image102;
     }
 
     /**
@@ -60,7 +60,7 @@ class TeamIcon extends AbstractModel
      */
     public function getImage34()
     {
-        return $this->image_34;
+        return $this->image34;
     }
 
     /**
@@ -68,7 +68,7 @@ class TeamIcon extends AbstractModel
      */
     public function getImage44()
     {
-        return $this->image_44;
+        return $this->image44;
     }
 
     /**
@@ -76,7 +76,7 @@ class TeamIcon extends AbstractModel
      */
     public function getImage68()
     {
-        return $this->image_68;
+        return $this->image68;
     }
 
     /**
@@ -84,7 +84,7 @@ class TeamIcon extends AbstractModel
      */
     public function getImage88()
     {
-        return $this->image_88;
+        return $this->image88;
     }
 
     /**
@@ -92,6 +92,6 @@ class TeamIcon extends AbstractModel
      */
     public function getImageOriginal()
     {
-        return $this->image_original;
+        return $this->imageOriginal;
     }
 }

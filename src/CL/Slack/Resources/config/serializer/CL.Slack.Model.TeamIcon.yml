@@ -18,5 +18,6 @@ CL\Slack\Model\TeamIcon:
         image132:
             type: string
             serialized_name: image_132
-        image_original:
+        imageOriginal:
             type: string
+            serialized_name: image_original
