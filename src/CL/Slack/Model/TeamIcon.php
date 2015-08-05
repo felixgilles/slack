@@ -37,7 +37,7 @@ class TeamIcon extends AbstractModel
     /**
      * @var string
      */
-    private $image_orignal;
+    private $image_original;
 
     /**
      * @return string|null
@@ -92,6 +92,6 @@ class TeamIcon extends AbstractModel
      */
     public function getImageOriginal()
     {
-        return $this->image_orignal;
+        return $this->image_original;
     }
 }
