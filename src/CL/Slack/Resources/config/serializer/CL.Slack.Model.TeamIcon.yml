@@ -18,5 +18,5 @@ CL\Slack\Model\UserProfile:
         image132:
             type: string
             serialized_name: image_132
-        image_default:
+        image_original:
             type: string
