@@ -12,6 +12,7 @@
 namespace CL\Slack\Transport;
 
 use CL\Slack\Exception\SlackException;
+use CL\Slack\Payload\OauthAccessPayload;
 use CL\Slack\Payload\PayloadInterface;
 use CL\Slack\Payload\PayloadResponseInterface;
 use CL\Slack\Serializer\PayloadSerializer;
@@ -51,27 +52,27 @@ class ApiClient implements ApiClientInterface
     /**
      * @var string|null
      */
-    private $token;
+    protected $token;
 
     /**
      * @var PayloadSerializer
      */
-    private $payloadSerializer;
+    protected $payloadSerializer;
 
     /**
      * @var PayloadResponseSerializer
      */
-    private $payloadResponseSerializer;
+    protected $payloadResponseSerializer;
 
     /**
      * @var ClientInterface
      */
-    private $client;
+    protected $client;
 
     /**
      * @var EventDispatcherInterface
      */
-    private $eventDispatcher;
+    protected $eventDispatcher;
 
     /**
      * @param string|null                   $token
@@ -103,7 +104,7 @@ class ApiClient implements ApiClientInterface
     public function send(PayloadInterface $payload, $token = null)
     {
         try {
-            if ($token === null && $this->token === null) {
+            if ($token === null && $this->token === null && !is_a($payload, OauthAccessPayload::class)) {
                 throw new \InvalidArgumentException('You must supply a token to send a payload, since you did not provide one during construction');
             }
 
@@ -141,10 +142,13 @@ class ApiClient implements ApiClientInterface
      *
      * @return array
      */
-    private function doSend($method, array $data, $token = null)
+    protected function doSend($method, array $data, $token = null)
     {
         try {
             $data['token'] = $token ?: $this->token;
+            if (empty($data['token'])) {
+                unset($data['token']);
+            }
 
             $this->eventDispatcher->dispatch(self::EVENT_REQUEST, new RequestEvent($data));
 
@@ -179,7 +183,7 @@ class ApiClient implements ApiClientInterface
      *
      * @return RequestInterface
      */
-    private function createRequest($method, array $payload)
+    protected function createRequest($method, array $payload)
     {
         $request = $this->client->createRequest('POST');
         $request->setUrl(self::API_BASE_URL.$method);
