@@ -1,0 +1,12 @@
+CL\Slack\Model\User:
+    properties:
+        id:
+            type: string
+        name:
+            type: string
+        domain:
+            type: string
+        email_domain:
+            type: string
+        icon:
+            type: CL\Slack\Model\TeamIcon
