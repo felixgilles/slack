@@ -1,4 +1,4 @@
-CL\Slack\Model\UserProfile:
+CL\Slack\Model\TeamIcon:
     properties:
         image34:
             type: string

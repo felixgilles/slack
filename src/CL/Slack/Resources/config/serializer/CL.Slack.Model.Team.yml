@@ -1,4 +1,4 @@
-CL\Slack\Model\User:
+CL\Slack\Model\Team:
     properties:
         id:
             type: string

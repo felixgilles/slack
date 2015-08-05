@@ -1,4 +1,4 @@
-CL\Slack\Payload\UsersInfoPayloadResponse:
+CL\Slack\Payload\TeamInfoPayloadResponse:
     properties:
         team:
             type: CL\Slack\Model\Team
