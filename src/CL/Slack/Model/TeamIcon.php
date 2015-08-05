@@ -35,7 +35,7 @@ class TeamIcon extends AbstractModel
     private $image_132;
 
     /**
-     * @var boolean
+     * @var string
      */
     private $image_default;
 
@@ -88,9 +88,9 @@ class TeamIcon extends AbstractModel
     }
 
     /**
-     * @return bool True if it's the default image of the team
+     * @return string
      */
-    public function isImageDefault()
+    public function getImageDefault()
     {
         return $this->image_default;
     }

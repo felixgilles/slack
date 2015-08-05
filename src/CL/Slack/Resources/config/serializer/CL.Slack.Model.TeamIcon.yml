@@ -1,7 +1,5 @@
 CL\Slack\Model\UserProfile:
     properties:
-        image_default:
-            type: boolean
         image34:
             type: string
             serialized_name: image_34
@@ -20,3 +18,5 @@ CL\Slack\Model\UserProfile:
         image132:
             type: string
             serialized_name: image_132
+        image_default:
+            type: string
